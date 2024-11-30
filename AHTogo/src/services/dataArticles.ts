@@ -1,0 +1,17 @@
+export const data= [
+    {id:1,title:"Bob",content:"",srcImage:"bob",url:'https://www.ah-togo.fr/images/Bob.png'},
+    {id:2,title:"Bandeau",content:"",srcImage:"bob",url:'https://www.ah-togo.fr/images/bandeau.jpg'},
+    {id:3,title:"Bonnet de soin",content:"",srcImage:"bob",url:'https://www.ah-togo.fr/images/bonnet_de_soin.jpg'},
+    {id:4,title:"Durag",content:"",srcImage:"bob",url:'https://www.ah-togo.fr/images/bonnet_de_soin_avec_bandeau.jpg'},
+    {id:5,title:"Boucles d'oreilles",content:"",srcImage:"bob",url:'https://www.ah-togo.fr/images/boucle_oreille.jpg'},
+    {id:6,title:"Casquette et sacoche",content:"",srcImage:"bob",url:'https://www.ah-togo.fr/images/casquette_pochette.jpg'},
+    {id:7,title:"Chouchou",content:"",srcImage:"bob",url:'https://www.ah-togo.fr/images/chouchou.jpg'},
+    {id:8,title:"Éventail",content:"",srcImage:"bob",url:'https://www.ah-togo.fr/images/eventaille.jpg'},
+    {id:9,title:"Lacets",content:"",srcImage:"bob",url:'https://www.ah-togo.fr/images/lassais.jpg'},
+    {id:10,title:"Pagne africain",content:"",srcImage:"bob",url:'https://www.ah-togo.fr/images/pagne.jpg'},
+    {id:11,title:"Sac magique",content:"",srcImage:"bob",url:'https://www.ah-togo.fr/images/sac_magique.jpg'},
+    {id:12,title:"Sac pliable",content:"",srcImage:"bob",url:'https://www.ah-togo.fr/images/sac_rangable.jpg'},
+    {id:12,title:"Pagner et éventail",content:"",srcImage:"bob",url:'https://www.ah-togo.fr/images/pagner_evetnail.jpg'},
+    {id:12,title:"Tablier de cuisine",content:"",srcImage:"bob",url:'https://www.ah-togo.fr/images/tablier-cuisine.jpeg'},
+    {id:12,title:"T-shirt",content:"",srcImage:"bob",url:'https://www.ah-togo.fr/images/t-shirt.jpeg'},
+]

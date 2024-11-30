@@ -1,0 +1,119 @@
+.div-modal{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 39%;
+    border-radius: 15px;
+    background-color: #EFEFDF;
+}
+
+.header-of-modale{
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    margin-bottom: 2em;
+    padding-top: 10px;
+}
+
+.header-of-modale > h1{
+    position: absolute;
+    left: 39%;
+    padding-top: 10px;
+}
+.body-of-modale{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+}
+
+.body-of-modale{
+    width: 70%;
+    font-size: 20px;
+}
+
+.logo-modal{
+    width: 8%;
+}
+
+.button-of-modale{
+    width: 30%;
+    background-color: #BD5903;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+}
+
+@media screen and (max-width: 700px){
+
+    .button-of-modale{
+        margin-left: auto;
+        margin-right: auto;
+        padding: 15px 32px;
+        width: 100%;
+    }
+
+    .header-of-modale > h1{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        padding-top: 10px;
+    }
+    .logo-modal{
+        display: none;
+    }
+    .div-modal{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 70%;
+        border-radius: 15px;
+        background-color: #EFEFDF;
+    }
+
+}
+
+@media screen and (max-width: 1000px) and (min-width: 700px) {
+    .button-of-modale{
+        margin-left: auto;
+        margin-right: auto;
+        padding: 15px 32px;
+        width: 60%;
+    }
+
+    .header-of-modale > h1{
+        position: relative;
+        margin-bottom: 1em;
+    }
+
+    .logo-modal{
+        display: none;
+    }
+    .div-modal{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 50%;
+        border-radius: 15px;
+        background-color: #EFEFDF;
+    }
+}

@@ -1,0 +1,39 @@
+.global-page{
+    margin-top: 2em;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-list-of-articles{
+    width: 100%;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 13em);
+    gap: 10px;
+}
+
+@keyframes appear {
+    0%{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+.animation-of-modal{
+    animation: appear 350ms ease-in 1;
+}
+
+@media screen and (max-width: 550px) {
+
+    .main-list-of-articles{
+        grid-template-columns: repeat(2, 11em);
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 550px) {
+
+    .main-list-of-articles{
+        grid-template-columns: repeat(3, 11em);
+    }
+}

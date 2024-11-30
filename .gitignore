@@ -1,0 +1,11 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+#Ah-togo
+/AHTogo/build
+/AHTogo/node_modules
+
+#WordPress
+/wp/wordpress
