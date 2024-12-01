@@ -62,7 +62,7 @@ const HomePages=()=> {
                             <button className="button" onClick={handlebutton}>{button_text}</button>
                         </div>
                     </div>
-                )}
+                )}'
             </div>
         </div>
     );
