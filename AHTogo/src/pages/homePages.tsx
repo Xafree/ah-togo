@@ -44,7 +44,7 @@ const HomePages=()=> {
     const handlebutton = ()=> {
         navigate(link);
     }
-    console.log(dateHomePage);
+
     return (
         <div>
             <div className="global-home-pages">
@@ -52,17 +52,25 @@ const HomePages=()=> {
                 {dateHomePage && (
                     <div className="home-pages-wrapper">
                         <div className="home-page-container">
-                            <span className="back-block-img-top"></span>
-                            <span className="back-block-img-bot"></span>
                             <img src={dateHomePage.image} alt="acceuil"/>
                         </div>
                         <div className="home-page-container-text">
-                            <h2 className="title">{dateHomePage.title}</h2>
-                            <p>{dateHomePage.description}</p>
-                            <button className="button" onClick={handlebutton}>{button_text}</button>
+                            <h2 className="title-home-page">{dateHomePage.title}</h2>
+                            <p>
+                                {dateHomePage.description.split(/\r?\n/).map((line, index) => (
+                                    <p key={index}>
+                                        {line}
+                                        <br />
+                                    </p>
+                                ))}
+                            </p>
+                            {
+                                //Faire une detection de mobile pour ne pas afficher le bouton
+                                dateHomePage.description === "MOBILE" && <button className="button" onClick={handlebutton}>{button_text}</button>
+                            }
                         </div>
                     </div>
-                )}'
+                )}
             </div>
         </div>
     );
