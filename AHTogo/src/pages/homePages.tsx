@@ -6,10 +6,12 @@ import {useNavigate} from "react-router-dom";
 import {getDataHomePage} from "../services/home.service";
 import {HomesPagesData} from "../models/home.page.model";
 import axios from "axios";
+import {useDeviceType} from "../hooks/useDeviceType";
 
 const HomePages=()=> {
     let navigate = useNavigate();
     let link:string = (process.env.REACT_APP_LINK_ARTICLES as string);
+    const deviceType = useDeviceType();
     const [dateHomePage, setDataHomePage] = useState<HomesPagesData | null>(null);
 
     /**
@@ -44,7 +46,7 @@ const HomePages=()=> {
     const handlebutton = ()=> {
         navigate(link);
     }
-
+     console.log(deviceType);
     return (
         <div>
             <div className="global-home-pages">
@@ -56,14 +58,13 @@ const HomePages=()=> {
                         </div>
                         <div className="home-page-container-text">
                             <h2 className="title-home-page">{dateHomePage.title}</h2>
-                            <p>
-                                {dateHomePage.description.split(/\r?\n/).map((line, index) => (
-                                    <p key={index}>
-                                        {line}
-                                        <br />
-                                    </p>
-                                ))}
-                            </p>
+                            {/* On parcours la phrase pour remplacer les \r\n en balise <br /> */}
+                            {dateHomePage.description.split(/\r?\n/).map((line, index) => (
+                                <p key={index}>
+                                    {line}
+                                    <br />
+                                </p>
+                            ))}
                             {
                                 //Faire une detection de mobile pour ne pas afficher le bouton
                                 dateHomePage.description === "MOBILE" && <button className="button" onClick={handlebutton}>{button_text}</button>

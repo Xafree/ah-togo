@@ -14,7 +14,6 @@ const Navbar = () => {
                     <img src={logo} alt="logo AHTogo" className="logo"/>
                     <h1 className="title">AH Togo</h1>
                 </div>
-
                 <div className="position">
                     <div className="navbar">
                         <div className="article-icon">
