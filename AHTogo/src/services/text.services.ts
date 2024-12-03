@@ -1,6 +1,6 @@
 export const title_home_page:string = "Vous ne trouverez pas plus Artisanal !";
 export const body_text :string= "Notre association s'engage à améliorer les conditions de vie des communautés togolaises locales en valorisant leur artisanat unique. Grâce à notre soutien, les artisans locaux prospèrent tout en préservant leurs traditions. Nous envoyons aussi des produits de première nécessité et des vêtements de qualité depuis la France. Faites un don pour nous aider à poursuivre cette mission et à soutenir ceux qui en ont le plus besoin.";
-export const button_text:string= "Liste des articles";
+export const button_text:string= "Voir la liste des articles";
 
 //about-us content
 export const title_page:string = "Ce que nous réalisons";

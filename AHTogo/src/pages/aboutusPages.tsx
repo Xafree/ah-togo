@@ -13,12 +13,13 @@ import don from '../media/imgs/don.jpg';
 import artisan from '../media/imgs/artisant_local.jpg';
 import '../styles/pages/aboutus.css';
 import {useDeviceType} from "../hooks/useDeviceType";
+import Navbar from "../components/navbar/Navbar";
 
 function AboutusPages() {
     const deviceType = useDeviceType();
     return (
         <div>
-            <NavbarPhone />
+            {deviceType=== 'mobile'?  <NavbarPhone /> : <Navbar/>}
             <div className="global-page">
                 <h1>{title_page}</h1>
                 <div className="main-about-us">

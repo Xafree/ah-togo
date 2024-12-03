@@ -21,7 +21,7 @@ const NavbarPhone = () => {
                             </NavLink>
                         </div>
                         <div className="home-icon">
-                            <NavLink to="/">
+                            <NavLink to="/" className="link">
                                 <img src={home} alt="Acceuil" className="icon"/>
                             </NavLink>
                         </div>

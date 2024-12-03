@@ -13,24 +13,24 @@ const Navbar = () => {
                     <img src={logo} alt="logo AHTogo" className="logo-desktop"/>
                     <h1 className="title">AH Togo</h1>
                 </div>
-                <div className="position-desktop">
-                    <div className="navbar-desktop">
-                        <div className="home-icon-desktop">
-                            <NavLink to="/">
-                                <img src={home} alt="Acceuil" className="icon-desktop"/>
-                            </NavLink>
-                        </div>
-                        <div className="article-icon-desktop">
-                            <NavLink to="/articles">
-                                <img src={shop} alt="Articles" className="icon-desktop"/>
-                            </NavLink>
-                        </div>
-
-                        <div className="about-us-icon-desktop">
-                            <NavLink to="/reseaux">
-                                <img src={aboutUs} alt="contact" className="icon-desktop"/>
-                            </NavLink>
-                        </div>
+                <div className="navbar-desktop">
+                    <div className="home-icon-desktop">
+                        <NavLink to="/" className="link">
+                            <img src={home} alt="Acceuil" className="icon-desktop"/>
+                            <p className="label-link">Accueil</p>
+                        </NavLink>
+                    </div>
+                    <div className="article-icon-desktop">
+                        <NavLink to="/articles" className="link">
+                            <img src={shop} alt="Articles" className="icon-desktop"/>
+                            <p className="label-link">Articles</p>
+                        </NavLink>
+                    </div>
+                    <div className="about-us-icon-desktop">
+                        <NavLink to="/reseaux" className="link">
+                            <img src={aboutUs} alt="contact" className="icon-desktop"/>
+                            <p className="label-link">Association</p>
+                        </NavLink>
                     </div>
                 </div>
         </div>

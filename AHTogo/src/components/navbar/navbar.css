@@ -2,34 +2,55 @@
     display: flex;
     justify-content: space-between;
     width: 80%;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
     background-color: #D69224;
     border-radius: 15px;
     padding : 10px 30px 10px 30px;
-    margin-top: 2em;
-}
-
-.logo-desktop{
-    width: 25%;
+    margin-top: 1em;
 }
 
 .logo-title-desktop{
     display: flex;
-    flex-direction: row;
     align-items: center;
+}
+
+.logo-desktop{
+    width: 20%;
+    margin-right: 1.5em;
 }
 
 .navbar-desktop{
     display: flex;
+    justify-content: flex-end;
     width: 15%;
 }
 
 .icon-desktop{
-    width: 100%;
+    width: 50px;
 }
 
-.position-desktop{
+.about-us-icon-desktop{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-icon-desktop{
+    margin-right: 2em;
+}
+
+.home-icon-desktop{
+    margin-right: 3em;
+}
+
+.link{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.label-link{
+    color: black;
 }

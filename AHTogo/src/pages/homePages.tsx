@@ -47,17 +47,17 @@ const HomePages=()=> {
     const handlebutton = ()=> {
         navigate(link);
     }
-    console.log(deviceType);
+
     return (
         <div>
-            <div className="global-home-pages">
-                <Navbar />
+            <div className={deviceType === 'mobile'?"global-home-pages":"global-home-pages-desktop"}>
+                {deviceType=== 'mobile'?  <NavbarPhone /> : <Navbar/>}
                 {dateHomePage && (
-                    <div className="home-pages-wrapper">
-                        <div className="home-page-container">
+                    <div className={deviceType === 'mobile'?"home-pages-wrapper" : "home-pages-wrapper-desktop"}>
+                        <div className={deviceType === 'mobile'?"home-page-container" :"home-page-container-desktop" }>
                             <img src={dateHomePage.image} alt="acceuil"/>
                         </div>
-                        <div className="home-page-container-text">
+                        <div className={deviceType === 'mobile'?"home-page-container-text":"home-page-container-text-desktop"}>
                             <h2 className="title-home-page">{dateHomePage.title}</h2>
                             {/* On parcours la phrase pour remplacer les \r\n en balise <br /> */}
                             {dateHomePage.description.split(/\r?\n/).map((line, index) => (
@@ -66,13 +66,12 @@ const HomePages=()=> {
                                     <br />
                                 </p>
                             ))}
-                            {
-                                //Faire une detection de mobile pour ne pas afficher le bouton
-                                dateHomePage.description === "MOBILE" && <button className="button" onClick={handlebutton}>{button_text}</button>
-                            }
                         </div>
                     </div>
                 )}
+                {
+                    deviceType === "desktop" && <button className="button" onClick={handlebutton}>{button_text}</button>
+                }
             </div>
         </div>
     );

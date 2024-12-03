@@ -7,6 +7,7 @@ import {data} from "../services/dataArticles";
 import '../styles/pages/articlespage.css';
 import ModalInformation from "../components/modaleInformation/ModaleInformation";
 import {useDeviceType} from "../hooks/useDeviceType";
+import Navbar from "../components/navbar/Navbar";
 
 function ArticlesPages() {
     const deviceType = useDeviceType();
@@ -24,7 +25,7 @@ function ArticlesPages() {
 
     return (
         <div>
-            <NavbarPhone />
+            {deviceType=== 'mobile'?  <NavbarPhone /> : <Navbar/>}
             <div className="global-page">
                 <div className="main-list-of-articles">
                     {
