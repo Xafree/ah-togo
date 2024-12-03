@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/pages/homepage.css';
-import Navbar from "../components/navbar/Navbar";
+import NavbarPhone from "../components/navbar/Navbar-phone";
 import {
     bloc_exportation_text,
     bloc_exportation_title, bloc_help_text,
@@ -12,11 +12,13 @@ import standAhtogo from '../media/imgs/stand-ahtogo.svg';
 import don from '../media/imgs/don.jpg';
 import artisan from '../media/imgs/artisant_local.jpg';
 import '../styles/pages/aboutus.css';
+import {useDeviceType} from "../hooks/useDeviceType";
 
 function AboutusPages() {
+    const deviceType = useDeviceType();
     return (
         <div>
-            <Navbar/>
+            <NavbarPhone />
             <div className="global-page">
                 <h1>{title_page}</h1>
                 <div className="main-about-us">

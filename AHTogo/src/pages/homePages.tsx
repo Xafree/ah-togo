@@ -1,12 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import '../styles/pages/homepage.css';
-import Navbar from "../components/navbar/Navbar";
+import NavbarPhone from "../components/navbar/Navbar-phone";
 import {button_text} from "../services/text.services";
 import {useNavigate} from "react-router-dom";
 import {getDataHomePage} from "../services/home.service";
 import {HomesPagesData} from "../models/home.page.model";
 import axios from "axios";
 import {useDeviceType} from "../hooks/useDeviceType";
+import Navbar from "../components/navbar/Navbar";
 
 const HomePages=()=> {
     let navigate = useNavigate();
@@ -46,7 +47,7 @@ const HomePages=()=> {
     const handlebutton = ()=> {
         navigate(link);
     }
-     console.log(deviceType);
+    console.log(deviceType);
     return (
         <div>
             <div className="global-home-pages">
