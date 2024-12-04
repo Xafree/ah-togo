@@ -1,16 +1,13 @@
 import React, {useEffect} from 'react';
 import '../styles/pages/homepage.css';
 import '../components/card/card.css'
-import NavbarPhone from "../components/navbar/Navbar-phone";
+import Navbar from "../components/navbar/Navbar";
 import Card from "../components/card/Card";
 import {data} from "../services/dataArticles";
 import '../styles/pages/articlespage.css';
 import ModalInformation from "../components/modaleInformation/ModaleInformation";
-import {useDeviceType} from "../hooks/useDeviceType";
-import Navbar from "../components/navbar/Navbar";
 
 function ArticlesPages() {
-    const deviceType = useDeviceType();
     const [open, setOpen] = React.useState(false);
     const handleClose = () => setOpen(false);
     const handleOpen = () => setOpen(true);
@@ -25,7 +22,7 @@ function ArticlesPages() {
 
     return (
         <div>
-            {deviceType=== 'mobile'?  <NavbarPhone /> : <Navbar/>}
+            <Navbar />
             <div className="global-page">
                 <div className="main-list-of-articles">
                     {

@@ -36,6 +36,7 @@ export function useDeviceType(): DeviceType {
     }, []);
 
     return deviceType;
+
 }
 
 

@@ -1,18 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import '../styles/pages/homepage.css';
-import NavbarPhone from "../components/navbar/Navbar-phone";
+import Navbar from "../components/navbar/Navbar";
 import {button_text} from "../services/text.services";
 import {useNavigate} from "react-router-dom";
 import {getDataHomePage} from "../services/home.service";
 import {HomesPagesData} from "../models/home.page.model";
 import axios from "axios";
-import {useDeviceType} from "../hooks/useDeviceType";
-import Navbar from "../components/navbar/Navbar";
 
 const HomePages=()=> {
     let navigate = useNavigate();
     let link:string = (process.env.REACT_APP_LINK_ARTICLES as string);
-    const deviceType = useDeviceType();
     const [dateHomePage, setDataHomePage] = useState<HomesPagesData | null>(null);
 
     /**
@@ -50,14 +47,14 @@ const HomePages=()=> {
 
     return (
         <div>
-            <div className={deviceType === 'mobile'?"global-home-pages":"global-home-pages-desktop"}>
-                {deviceType=== 'mobile'?  <NavbarPhone /> : <Navbar/>}
+            <div className="global-home-pages">
+                <Navbar />
                 {dateHomePage && (
-                    <div className={deviceType === 'mobile'?"home-pages-wrapper" : "home-pages-wrapper-desktop"}>
-                        <div className={deviceType === 'mobile'?"home-page-container" :"home-page-container-desktop" }>
+                    <div className="home-pages-wrapper">
+                        <div className="home-page-container">
                             <img src={dateHomePage.image} alt="acceuil"/>
                         </div>
-                        <div className={deviceType === 'mobile'?"home-page-container-text":"home-page-container-text-desktop"}>
+                        <div className="home-page-container-text">
                             <h2 className="title-home-page">{dateHomePage.title}</h2>
                             {/* On parcours la phrase pour remplacer les \r\n en balise <br /> */}
                             {dateHomePage.description.split(/\r?\n/).map((line, index) => (
@@ -69,9 +66,7 @@ const HomePages=()=> {
                         </div>
                     </div>
                 )}
-                {
-                    deviceType === "desktop" && <button className="button" onClick={handlebutton}>{button_text}</button>
-                }
+                <button className="button" onClick={handlebutton}>{button_text}</button>
             </div>
         </div>
     );
