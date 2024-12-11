@@ -47,19 +47,21 @@
 /*Mobile Screen*/
 @media screen and (max-width: 768px){
 
-    .global-page{
+    .global-article{
         width: 100%;
+        display: flex;
+        justify-content: center;
         margin-top: 1em;
+
     }
 
     .main-list-of-articles{
+        height: calc(100vh - 180px);
         display: grid;
         grid-template-columns: repeat(2, 11em);
-        margin-left: auto;
-        margin-right: auto;
+        gap: 7px 0;
         overflow-y: scroll;
-        height: 80%;
-        max-height: 80%;
+        overflow-x: hidden;
     }
 
 }

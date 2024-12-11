@@ -1,7 +1,9 @@
 .card{
     width: 200px;
-    border-radius: 15px;
+    border-radius: 12px;
     position: relative;
+    text-align: center;
+    margin-left: 0.5em; /*Permet de centrer les éléments trouver une autre solution plus propre*/
 }
 
 .img-card{

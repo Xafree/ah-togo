@@ -8,6 +8,7 @@ import '../styles/pages/articlespage.css';
 import ModalInformation from "../components/modaleInformation/ModaleInformation";
 
 function ArticlesPages() {
+
     const [open, setOpen] = React.useState(false);
     const handleClose = () => setOpen(false);
     const handleOpen = () => setOpen(true);
@@ -21,9 +22,9 @@ function ArticlesPages() {
     },[]);
 
     return (
-        <div>
+        <div className="global-article-pages">
             <Navbar />
-            <div className="global-page">
+            <div className="global-article">
                 <div className="main-list-of-articles">
                     {
                         articles.map((article, index) => (
