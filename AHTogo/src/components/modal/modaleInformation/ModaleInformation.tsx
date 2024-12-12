@@ -1,8 +1,8 @@
 import React from 'react';
 import './modal.css'
 import Modal from '@mui/material/Modal';
-import logo from "../../media/icons/arbre.svg";
-import {body_text_modal, modal_button, title_modal} from "../../services/text.services";
+import logo from "../../../media/icons/arbre.svg";
+import {body_text_modal, modal_button, title_modal} from "../../../services/text.services";
 
 interface IModalInformation{
     handleClose:any;

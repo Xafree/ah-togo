@@ -1,7 +1,7 @@
 export interface Articles {
     id: number;
     title: string;
-    content: string;
-    srcImage:string;
+    description: string;
+    image:string[];
     price:number;
 }

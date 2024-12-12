@@ -1,8 +1,8 @@
 import {axiosInstance} from "./http-common";
-import {HomesPagesData} from "../models/home.page.model";
+import {Articles} from "../models/articles-model";
 
 export async function getArticles(controller?:any) {
-    return await axiosInstance.get<HomesPagesData[]>("v1/articles",  {
+    return await axiosInstance.get<Articles[]>("v1/articles",  {
         signal: (controller? controller.signal : undefined),
     });
 }
