@@ -16,7 +16,6 @@ function ArticlesPages() {
     const handleClose = () => setOpen(false);
     const handleOpen = () => setOpen(true);
 
-
     useEffect(() => {
         //Permet d'annuler la requete en cas de démontage du composant.
         const controller = new AbortController();

@@ -2,17 +2,79 @@
 @media screen and (max-width: 700px){
 
     .div-card-modal{
-        width: 80%;
+        width: 70%;
         display: flex;
         flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
+        background-color: #FFF3E4;
+        border-radius: 15px;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
     }
 
     .image-card-modal{
-        width: 80%;
+        width: 100%;
     }
 
+    section {
+        display: flex;
+        margin: auto;
+        align-items: center;
+        flex: none;
+        overflow: auto;
+        overflow-y: scroll;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .text-modal-card{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+        width: 90%;
+        font-size: 10px;
+        font-weight: bold;
+    }
+    .x {
+        width: 100%;
+        flex-flow: row nowrap;
+        overflow-y: hidden;
+    }
+
+    /* scroll-snap */
+    .x.mandatory-scroll-snapping {
+        scroll-snap-type: x mandatory;
+    }
+
+    .scroll-card {
+        text-align: center;
+        scroll-snap-align: center;
+        flex: none;
+        width: 100%;
+    }
+
+    .i-text{
+        color: #D69224;
+        margin-bottom: 1em;
+    }
+
+    .button-modal{
+        width: 50%;
+        border-radius: 8px;
+        font-size: 11px;
+        padding : 10px 15px 10px 15px;
+        border: none;
+        background-color: #D69224;
+        color: white;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1em;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        cursor: pointer;
+        text-decoration: none;
+    }
 }
 
 @media screen and (max-width: 1000px) and (min-width: 700px) {
