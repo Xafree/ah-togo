@@ -117,3 +117,10 @@
         background-color: #EFEFDF;
     }
 }
+
+
+@media screen and (min-width : 1025px){
+    .modal-general{
+        display: none;
+    }
+}

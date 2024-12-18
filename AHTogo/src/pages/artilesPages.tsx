@@ -8,6 +8,8 @@ import ModalInformation from "../components/modal/modaleInformation/ModaleInform
 import axios from "axios";
 import {Articles} from "../models/articles-model";
 import {getArticles} from "../services/articles.service";
+import appelTelephon from '../media/icons/appel-telephonique.png';
+import whatsapp from '../media/icons/whatsapp.png';
 
 function ArticlesPages() {
 
@@ -51,6 +53,7 @@ function ArticlesPages() {
         <div className="global-article-pages">
             <Navbar />
             <div className="global-article">
+                <h1 className="h1-articles">Articles</h1>
                 <div className="main-list-of-articles">
                     {
                         dataArticle.map((article, index) => (
@@ -59,6 +62,19 @@ function ArticlesPages() {
                     }
                 </div>
                     <ModalInformation open={open} handleClose={handleClose}/>
+                    <footer className="footer">
+                        <p>Il est impossible de commander sur cette page merci de contacter l’association si vous etes interréser</p>
+                        <div className="div-footer">
+                            <div className="div-footer-phone">
+                                <img src={appelTelephon} alt="téléphone"  className="footer-img"/>
+                                <p>+33XXXXXXXXXX</p>
+                            </div>
+                            <div className="div-footer-phone">
+                                <img src={whatsapp} alt="whatsapp" className="footer-img"/>
+                                <p>+33XXXXXXXXXX</p>
+                            </div>
+                        </div>
+                    </footer>
             </div>
         </div>
     );

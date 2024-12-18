@@ -14,6 +14,7 @@ function ModalInformation({handleClose,open}:IModalInformation) {
         <Modal
             open={open}
             onClose={handleClose}
+            className="modal-general"
         >
             <div className="div-modal">
                 <div className="header-of-modale">
