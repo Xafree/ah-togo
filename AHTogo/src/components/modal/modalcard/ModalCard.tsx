@@ -6,9 +6,10 @@ interface IModalCard{
     handleClose:() => void,
     open:boolean;
     images:string[];
+    title:string;
 }
 
-function ModalCard({handleClose,open,images}:IModalCard) {
+function ModalCard({handleClose,open,images,title}:IModalCard) {
     return (
         <Modal
             open={open}
@@ -22,11 +23,15 @@ function ModalCard({handleClose,open,images}:IModalCard) {
                         </div>
                     ))}
                 </section>
-                <div className="text-modal-card">
-                    <i className="i-text">Chaque élément sont des modèles unique.</i>
-                    <i className="i-text">Pour plus de précision merci de contacter l'association</i>
+                <div className="div-panel-right">
+                    <h1 className="h1-title-modal">{title}</h1>
+                    <div className="text-modal-card">
+                        <i className="i-text">Chaque élément sont des modèles unique.</i>
+                        <i className="i-text">Pour plus de précision merci de contacter l'association</i>
+                    </div>
+                    <button className="button-modal" onClick={handleClose}>Fermer</button>
                 </div>
-                <button className="button-modal" onClick={handleClose}>Fermer</button>
+
             </div>
         </Modal>
     );

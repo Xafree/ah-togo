@@ -23,7 +23,7 @@ const Card = ({title, content, srcImage}: ICard) => {
                     <p>{content}</p>
                 </div>
             </div>
-            <ModalCard open={openCard} handleClose={handleCloseCard} images={srcImage}/>
+            <ModalCard open={openCard} handleClose={handleCloseCard} images={srcImage} title={title} />
         </div>
     );
 }

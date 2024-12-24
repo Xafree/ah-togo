@@ -58,7 +58,7 @@
     }
 
     .main-list-of-articles{
-        height: calc(100vh - 250px);
+        height: calc(100vh - 260px);
         display: grid;
         grid-template-columns: repeat(2, 11em);
         gap: 7px 0;

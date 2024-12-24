@@ -18,6 +18,10 @@
         width: 100%;
     }
 
+    .h1-title-modal{
+        display: none;
+    }
+
     section {
         display: flex;
         margin: auto;
@@ -60,6 +64,12 @@
         margin-bottom: 1em;
     }
 
+    .div-panel-right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .button-modal{
         width: 50%;
         border-radius: 8px;
@@ -68,8 +78,6 @@
         border: none;
         background-color: #D69224;
         color: white;
-        margin-left: auto;
-        margin-right: auto;
         margin-bottom: 1em;
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
         cursor: pointer;
@@ -79,10 +87,10 @@
 
 @media screen and (min-width : 1025px){
     .div-card-modal{
-        width: 60%;
-        height: 70%;
+        width: 45%;
+        height: 60%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         background-color: #FFF3E4;
         border-radius: 15px;
         position: absolute;
@@ -92,23 +100,79 @@
         transform: translate(-50%, -50%);
     }
 
+    .div-card-modal > .div-panel-right{
+        align-items: center;
+    }
+
+    .image-card-modal{
+        width: 350px;
+    }
+
     section {
         display: flex;
-        margin: auto;
         align-items: center;
         flex: none;
         overflow: auto;
         overflow-y: scroll;
-        border-radius: 15px 15px 0 0;
+    }
+
+    .h1-title-modal{
+        color: #D69224;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .x {
+        width: 50%;
+        flex-flow: row nowrap;
+        overflow-y: hidden;
+        border-radius: 15px 0 0 15px;
+    }
+
+    /* scroll-snap */
+    .x.mandatory-scroll-snapping {
+        scroll-snap-type: x mandatory;
+    }
+
+    .div-panel-right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .scroll-card {
+        text-align: center;
+        scroll-snap-align: center;
+        flex: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
     }
 
     .text-modal-card{
         display: flex;
         flex-direction: column;
         text-align: center;
-        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
         width: 90%;
-        font-size: 10px;
-        font-weight: bold;
+        margin-bottom: 2em;
+        font-size: 12px;
     }
+
+    .button-modal{
+        width: 50%;
+        border-radius: 8px;
+        font-size: 11px;
+        padding : 10px 15px 10px 15px;
+        border: none;
+        background-color: #D69224;
+        color: white;
+        margin-bottom: 1em;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        cursor: pointer;
+        text-decoration: none;
+    }
+
 }
