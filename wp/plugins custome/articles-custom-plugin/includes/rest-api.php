@@ -64,7 +64,7 @@ function mon_plugin_get_home_page() {
     $data = array();
 
     foreach ($pages as $page) {
-        preg_match('/src="([^"]+)"/', $page->post_content, $matches);
+        preg_match_all('/src="([^"]+)"/', $page->post_content, $matches);
 
         $data[] = array(
             'id' => $page->ID,
@@ -112,7 +112,7 @@ function mon_plugin_get_news() {
     $data = array();
 
     foreach ($pages as $page) {
-        preg_match('/src="([^"]+)"/', $page->post_content, $matches);
+        preg_match_all('/src="([^"]+)"/', $page->post_content, $matches);
 
         $data[] = array(
             'id' => $page->ID,
