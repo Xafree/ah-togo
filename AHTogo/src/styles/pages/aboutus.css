@@ -1,3 +1,56 @@
+.global-page-about{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.global-card-about-page{
+    width: 90%;
+    height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-card-abouut{
+    width: 420px;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+.div-card-about{
+    position: relative;
+    text-align: center;
+}
+
+.div-card-about > h1{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 1;
+    color : white;
+}
+
+.title-about-page{
+    color: #D69224;
+}
+
+
+
+/**
 .main-about-us{
     display: flex;
     flex-direction: row;
@@ -59,4 +112,4 @@
     .div-bloc-vente-p{
         margin-bottom: 1em;
     }
-}
+}**/

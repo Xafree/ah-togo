@@ -17,8 +17,8 @@ function ModalCard({handleClose,open,images,title}:IModalCard) {
         >
             <div className="div-card-modal">
                 <section className="x mandatory-scroll-snapping" dir="ltr">
-                    {images.map((image: string) => (
-                        <div className="scroll-card">
+                    {images.map((image: string,index) => (
+                        <div className="scroll-card" key={index}>
                             <img src={image} alt="Un chapeau" className="image-card-modal"/>
                         </div>
                     ))}

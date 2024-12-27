@@ -3,7 +3,7 @@ export const body_text :string= "Notre association s'engage à améliorer les co
 export const button_text:string= "Voir la liste des articles";
 
 //about-us content
-export const title_page:string = "Ce que nous réalisons";
+export const title_page:string = "L'association";
 export const bloc_sell_text:string = "Cette association vise à améliorer les conditions de vie des communautés locales en valorisant l'artisanat et en envoyant des produits de première nécessité et des vêtements depuis la France.";
 //export const bloc_sell_text:string = "Cette association à pour objectif l'amélioration des conditions de vie à petite échelle de communautés locales par le développement et la valorisation du travail artisanales et l'envoi de France des produits de première nécessité et de vêtement";
 export const bloc_sell_title:string = "Notre objectif";
