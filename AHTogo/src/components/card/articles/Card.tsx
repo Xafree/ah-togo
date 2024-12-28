@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './card.css';
-import ModalCard from "../modal/modalcard/ModalCard";
+import ModalCard from "../../modal/modalcard/ModalCard";
 
 interface ICard {
     title: string;
@@ -23,7 +23,7 @@ const Card = ({title, content, srcImage}: ICard) => {
                     <p>{content}</p>
                 </div>
             </div>
-            <ModalCard open={openCard} handleClose={handleCloseCard} images={srcImage} title={title} />
+            <ModalCard open={openCard} handleClose={handleCloseCard} images={srcImage} title={title} pages="articles" />
         </div>
     );
 }

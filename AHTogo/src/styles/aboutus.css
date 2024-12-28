@@ -1,0 +1,45 @@
+@media screen and (max-width : 768px ) {
+    .global-page-about {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .global-card-about-page {
+        width: 80%;
+        height: 78vh;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .title-about-page {
+        display: none;
+    }
+}
+
+@media screen and (min-width : 1025px ) {
+    .global-page-about {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 12px;
+    }
+
+    .global-card-about-page {
+        width: 85%;
+        height: 78vh;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .title-about-page {
+        color: #D69224;
+    }
+}

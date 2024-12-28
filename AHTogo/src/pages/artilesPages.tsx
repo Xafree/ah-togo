@@ -1,15 +1,14 @@
 import React, {useEffect, useState} from 'react';
-import '../styles/pages/homepage.css';
-import '../components/card/card.css'
+import '../styles/homepage.css';
+import '../components/card/articles/card.css'
 import Navbar from "../components/navbar/Navbar";
-import Card from "../components/card/Card";
-import '../styles/pages/articlespage.css';
+import Card from "../components/card/articles/Card";
+import '../styles/articlespage.css';
 import ModalInformation from "../components/modal/modaleInformation/ModaleInformation"
 import axios from "axios";
 import {Articles} from "../models/articles-model";
 import {getArticles} from "../services/articles.service";
-import appelTelephon from '../media/icons/appel-telephonique.png';
-import whatsapp from '../media/icons/whatsapp.png';
+import Footer from "../components/footer/Footer";
 
 function ArticlesPages() {
 
@@ -61,20 +60,8 @@ function ArticlesPages() {
                         ))
                     }
                 </div>
-                    <ModalInformation open={open} handleClose={handleClose}/>
-                    <footer className="footer">
-                        <p>Il est impossible de commander sur cette page merci de contacter l’association si vous etes interréser</p>
-                        <div className="div-footer">
-                            <div className="div-footer-phone">
-                                <img src={appelTelephon} alt="téléphone"  className="footer-img"/>
-                                <p>+33XXXXXXXXXX</p>
-                            </div>
-                            <div className="div-footer-phone">
-                                <img src={whatsapp} alt="whatsapp" className="footer-img"/>
-                                <p>+33XXXXXXXXXX</p>
-                            </div>
-                        </div>
-                    </footer>
+                <ModalInformation open={open} handleClose={handleClose}/>
+                <Footer />
             </div>
         </div>
     );

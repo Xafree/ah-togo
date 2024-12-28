@@ -16,6 +16,7 @@
 
     .image-card-modal{
         width: 100%;
+        object-fit: cover;
     }
 
     .h1-title-modal{
@@ -55,6 +56,7 @@
         scroll-snap-align: center;
         flex: none;
         width: 100%;
+
     }
 
     .i-text{
@@ -85,6 +87,41 @@
         cursor: pointer;
         text-decoration: none;
     }
+
+    /*---------------about page-------------*/
+
+    .div-card-modal-about{
+        width: 85%;
+        height: 50vh;
+        background-color: #FFF3E4;
+        border-radius: 15px;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .scroll-card-about {
+        overflow-y: hidden;
+        flex: none;
+        width: 100%;
+    }
+
+    .image-card-modal-about{
+        width: 100%;
+    }
+
+    .text-modal-card-about{
+        text-align: center;
+        align-items: center;
+        width: 90%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+    }
+
 }
 
 @media screen and (min-width : 1025px){
@@ -140,6 +177,7 @@
     .div-panel-right{
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         width: 100%;
     }
@@ -156,11 +194,9 @@
         display: flex;
         flex-direction: column;
         text-align: center;
-        margin-left: auto;
-        margin-right: auto;
         width: 90%;
         margin-bottom: 2em;
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .button-modal{
@@ -175,6 +211,43 @@
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
         cursor: pointer;
         text-decoration: none;
+    }
+
+
+    /*---------------about page-------------*/
+
+    .div-card-modal-about{
+        width: 85%;
+        height: 50vh;
+        display: flex;
+        flex-direction: row;
+        background-color: #FFF3E4;
+        border-radius: 15px;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .scroll-card-about {
+        overflow-y: hidden;
+        flex: none;
+        width: 100%;
+    }
+
+    .image-card-modal-about{
+        width: 110%;
+
+    }
+
+    .text-modal-card-about{
+        text-align: center;
+        align-items: center;
+        width: 90%;
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
 
 }

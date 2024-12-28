@@ -7,14 +7,14 @@ interface IModalCard{
     open:boolean;
     images:string[];
     title:string;
+    pages: string;
+    text?:string;
 }
 
-function ModalCard({handleClose,open,images,title}:IModalCard) {
-    return (
-        <Modal
-            open={open}
-            onClose={handleClose}
-        >
+function ModalCard({handleClose,open,images,title, pages,text}:IModalCard) {
+
+    const articlePage =()=>{
+        return (
             <div className="div-card-modal">
                 <section className="x mandatory-scroll-snapping" dir="ltr">
                     {images.map((image: string,index) => (
@@ -32,6 +32,40 @@ function ModalCard({handleClose,open,images,title}:IModalCard) {
                     <button className="button-modal" onClick={handleClose}>Fermer</button>
                 </div>
 
+            </div>
+        );
+    }
+
+    const aboutPage =() =>{
+        return(
+            <div className="div-card-modal-about">
+                <section className="x mandatory-scroll-snapping" dir="ltr">
+                    {images.map((image: string,index) => (
+                        <div className="scroll-card-about" key={index}>
+                            <img src={image} alt="" className="image-card-modal-about"/>
+                        </div>
+                    ))}
+                </section>
+                <div className="div-panel-right">
+                    <h1 className="h1-title-modal">{title}</h1>
+                    <div className="text-modal-card-about">
+                        <p>{text}</p>
+                    </div>
+                    <button className="button-modal" onClick={handleClose}>Fermer</button>
+                </div>
+            </div>
+        )
+    }
+
+    return (
+        <Modal
+            open={open}
+            onClose={handleClose}
+        >
+            <div>
+                {
+                    pages === "articles" ? articlePage() : aboutPage()
+                }
             </div>
         </Modal>
     );

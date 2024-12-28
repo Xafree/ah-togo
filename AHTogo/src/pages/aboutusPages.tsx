@@ -1,18 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import Navbar from "../components/navbar/Navbar";
 import {title_page} from "../services/text.services";
-import '../styles/pages/aboutus.css';
+import '../styles/aboutus.css';
 import axios from "axios";
 import {getInfoAboutPage} from "../services/about.service";
 import {DonsPagesModel} from "../models/dons-articles-model";
-import ModalCard from "../components/modal/modalcard/ModalCard";
+import Footer from "../components/footer/Footer";
+import CardAboutPages from "../components/card/about-page/Card-about-pages";
 
 function AboutusPages() {
 
     const [dataDons, setDataDons] = useState<DonsPagesModel[]>([]);
-    const [open, setOpen] = React.useState(false);
-    const handleClose = () => setOpen(!open);
-    const handleOpen = () => setOpen(!open);
 
     useEffect(() => {
         //Permet d'annuler la requete en cas de démontage du composant.
@@ -48,43 +46,15 @@ function AboutusPages() {
                     {
                         dataDons.map((don: DonsPagesModel, index) => {
                             return (
-                                <div className="div-card-about" key={index}  onClick={handleOpen}>
-                                    <h1>{don.title}</h1>
-                                    <img src={don.image} alt={don.title} className="img-card-abouut"/>
-                                    <ModalCard open={open} title={don.title} images={[don.image]} handleClose={handleClose} />
-                                </div>
+                                <CardAboutPages don={don} key={index}/>
                             )
                         })
                     }
                 </div>
+                <Footer />
             </div>
         </div>
     );
 }
 
 export default AboutusPages;
-
-
-/**
-
- <h1>{title_page}</h1>
- <div className="main-about-us">
- <div className="div-bloc-vente">
- <h1 className="div-bloc-vente-h1">{bloc_sell_title}</h1>
- <img src={standAhtogo} alt="stand ahtogo" className="div-bloc-vente-img"/>
- <p className="div-bloc-vente-p">{bloc_sell_text}</p>
- </div>
- <div className="div-bloc-vente">
- <h1 className="div-bloc-vente-h1">{bloc_exportation_title}</h1>
- <img src={artisan} alt="stand ahtogo" className="div-bloc-vente-img"/>
- <p className="div-bloc-vente-p">{bloc_exportation_text}</p>
- </div>
- <div className="div-bloc-vente">
- <h1 className="div-bloc-vente-h1">{bloc_help_title}</h1>
- <img src={don} alt="stand ahtogo" className="div-bloc-vente-img"/>
- <p className="div-bloc-vente-p">{bloc_help_text}</p>
- </div>
- </div>
-
-
- */

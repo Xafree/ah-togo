@@ -9,6 +9,7 @@ interface IModalInformation{
 }
 
 function ModalInformation({handleClose,open}:IModalInformation) {
+
     return (
         <Modal
             open={open}

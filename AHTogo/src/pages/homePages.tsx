@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import '../styles/pages/homepage.css';
+import '../styles/homepage.css';
 import Navbar from "../components/navbar/Navbar";
 import {button_text} from "../services/text.services";
 import {useNavigate} from "react-router-dom";
