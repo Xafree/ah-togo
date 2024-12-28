@@ -9,7 +9,7 @@ import axios from "axios";
 
 const HomePages=()=> {
     let navigate = useNavigate();
-    let link:string = (process.env.REACT_APP_LINK_ARTICLES as string);
+    let link:string = "/articles";
     const [dateHomePage, setDataHomePage] = useState<HomesPagesData | null>(null);
 
     /**

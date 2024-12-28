@@ -15,13 +15,13 @@ const Navbar = () => {
             </div>
             <div className="navbar">
                 <div className="home-icon">
-                    <NavLink to="/" className="link">
+                    <NavLink  to="/" className="link">
                         <img src={home} alt="Acceuil" className="icon"/>
                         <p className="label-link">Accueil</p>
                     </NavLink>
                 </div>
                 <div className="article-icon">
-                    <NavLink to="/articles" className="link">
+                    <NavLink  rel="preload" to="/articles" className="link">
                         <img src={shop} alt="Articles" className="icon"/>
                         <p className="label-link">Articles</p>
                     </NavLink>
